@@ -221,8 +221,9 @@ redux store => npm i @reduxjs/toolkit, npm i react-redux
 create store
 Routing -> npm i react-router-dom 
 create browser in app js and give router provider
-
-
+higher order function=> takes component and return components
+search - debouncing
+cashe
 
 Report web vitals- for data visualization
 

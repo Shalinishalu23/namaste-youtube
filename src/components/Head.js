@@ -1,10 +1,34 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../utility/appSlice'
+import { YOUTUBE_SEARCH_API } from '../utility/constant'
+import { cacheResults } from '../utility/searchSlice'
 
 const Head = () => {
+  const [searchQuery, setSearchQuery] = useState("")
+  const [suggestion, setsuggestion] = useState([])
+  const [showSuggestion, setShowSuggestion] = useState(false)
+
+  const searchCache = useSelector((store) => store.search)
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (searchCache[searchQuery]) { setsuggestion(searchCache[searchQuery]) } else { getSearchSuggestions() }
+    }, 200)
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [searchQuery])
+  const getSearchSuggestions = async () => {
+    console.log('api call', searchQuery)
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery)
+    const json = await data.json()
+    setsuggestion(json[1])
+    dispatch(cacheResults({
+      [searchQuery] : json[1]
+    }))
+  }
   const toggleMenuHandler = () => {
     dispatch(toggleMenu())
   }
@@ -26,8 +50,22 @@ const Head = () => {
 
       </div>
       <div className='col-span-10 px-10'>
-        <input className='w-1/2 border border-gray-400 p-2 rounded-l-full' type='text'></input>
-        <button className='border border-gray-400 px-5 py-2 bg-gray-100 rounded-r-full' >Search</button>
+        <div>
+          <input className='w-1/2 border border-gray-400 p-2 rounded-l-full' type='text' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onFocus={() => setShowSuggestion(true)} onBlur={() => setShowSuggestion(false)}
+          />
+          <button className='border border-gray-400 px-5 py-2 bg-gray-100 rounded-r-full' >Search</button>
+        </div>
+        {showSuggestion && (
+          <div className="fixed bg-white py-2 px-2 w-[37rem] shadow-lg rounded-lg border border-gray-100">
+            <ul>
+              {suggestion.map((s) => (
+                <li key={s} className="py-2 px-3 shadow-sm hover:bg-gray-100">
+                  🔍 {s}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div>
         <img
