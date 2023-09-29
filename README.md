@@ -224,6 +224,7 @@ create browser in app js and give router provider
 higher order function=> takes component and return components
 search - debouncing
 cashe
+comments n level nested data
 
 Report web vitals- for data visualization
 
