@@ -225,7 +225,13 @@ higher order function=> takes component and return components
 search - debouncing
 cashe
 comments n level nested data
-
+live comments 
+	web sockets(2 way handshake )
+	api calling
+Hooks for use
+	useMemo(chech result and rerender)
+	useRef
+	
 Report web vitals- for data visualization
 
 flex
