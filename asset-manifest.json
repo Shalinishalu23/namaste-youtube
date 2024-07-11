@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/shalini'sYouTube/static/css/main.fc48feae.css",
-    "main.js": "/shalini'sYouTube/static/js/main.81e9e970.js",
-    "static/js/787.f3f0f157.chunk.js": "/shalini'sYouTube/static/js/787.f3f0f157.chunk.js",
-    "index.html": "/shalini'sYouTube/index.html",
-    "main.fc48feae.css.map": "/shalini'sYouTube/static/css/main.fc48feae.css.map",
-    "main.81e9e970.js.map": "/shalini'sYouTube/static/js/main.81e9e970.js.map",
-    "787.f3f0f157.chunk.js.map": "/shalini'sYouTube/static/js/787.f3f0f157.chunk.js.map"
+    "main.css": "/namaste-youtube/static/css/main.fc48feae.css",
+    "main.js": "/namaste-youtube/static/js/main.3c55aaae.js",
+    "static/js/787.f3f0f157.chunk.js": "/namaste-youtube/static/js/787.f3f0f157.chunk.js",
+    "index.html": "/namaste-youtube/index.html",
+    "main.fc48feae.css.map": "/namaste-youtube/static/css/main.fc48feae.css.map",
+    "main.3c55aaae.js.map": "/namaste-youtube/static/js/main.3c55aaae.js.map",
+    "787.f3f0f157.chunk.js.map": "/namaste-youtube/static/js/787.f3f0f157.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc48feae.css",
-    "static/js/main.81e9e970.js"
+    "static/js/main.3c55aaae.js"
   ]
 }
