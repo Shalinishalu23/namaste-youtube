@@ -244,3 +244,12 @@ react fiber is new reconcilation responsible for div
 react context
 Redux toolkit= tool
 redux store
+
+github deploy
+  "homepage": "https://Shalinishalu23.github.io/shalini'sYouTube",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+	 "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+  npm run deploy

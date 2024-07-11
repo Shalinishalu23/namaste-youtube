@@ -2,7 +2,7 @@
   "name": "namaste-youtube",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Shalinishalu23.github.io/shalini'sYouTube",
+  "homepage": "https://Shalinishalu23.github.io/namaste-youtube",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
