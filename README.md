@@ -246,10 +246,9 @@ Redux toolkit= tool
 redux store
 
 github deploy
-  "homepage": "https://Shalinishalu23.github.io/shalini'sYouTube",
+  1."homepage": "https://Shalinishalu23.github.io/shalini'sYouTube", below name and version
+  2.npm i gh-pages -D
+  3 add below inside scripts
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-	 "devDependencies": {
-    "gh-pages": "^3.2.3"
-  }
-  npm run deploy
+4. npm run deploy
